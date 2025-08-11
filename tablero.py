@@ -12,7 +12,7 @@ class Tablero:
         if self.lugar_vacio(fila, columna):
             self.contenedor[fila][columna] = ficha
         else:
-            PosOcupadaExcep('La posición elegida esta ocupada!!')
+            raise PosOcupadaExcep('La posición elegida esta ocupada!!')
     def mostrar_tablero(self):
         print(f'{'|'.join(self.contenedor[0])}\n{'|'.join(self.contenedor[1])}\n{'|'.join(self.contenedor[2])}')
 #tab = Tablero()

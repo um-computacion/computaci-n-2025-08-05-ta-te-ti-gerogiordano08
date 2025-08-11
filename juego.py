@@ -15,14 +15,15 @@ class Juego:
             if fila[0] != ' ' and fila[0] == fila[1] == fila[2]:
                 return fila[0]
         # diagonales (ok)
-        if tab[0][0] != ' ' and tab[0][0] == tab[1][1] == tab[2][2] or tab[0][2] == tab[1][1] == tab[2][0]:
-            return tab[1][1]
+        if tab[1][1] != ' ':
+            if tab[0][0] == tab[1][1] == tab[2][2] or tab[0][2] == tab[1][1] == tab[2][0]:
+                return tab[1][1]
         # columnas (ok)
         for col in range(3): 
             if tab[0][col] != ' ' and tab[0][col] == tab[1][col] == tab[2][col]:
                 return tab[0][col]
-#tateti = Juego('ju1', 'ju2', 'x', 'o')
-#tateti.turno(tateti.jugador2, 0, 0)
+tateti = Juego('ju1', 'ju2', 'x', 'o')
+tateti.turno(tateti.jugador1, 0, 0)
 #tateti.turno(tateti.jugador2, 1, 1)
 #tateti.turno(tateti.jugador2, 2, 2)
-#print(tateti.hay_ganador())
+print(tateti.hay_ganador())
